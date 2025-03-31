@@ -1,13 +1,47 @@
-#Voice Recon Tasks
+# Voice Recon Tasks
 
-Q1) Probability of Rain with Monte Carlo Simulation:
+## Overview
+This repository contains implementations of three computational tasks:
 
-Implemented Monte Carlo simulation to estimate the probability of more than 'n' rainy days in a year. Added functionality to handle daily rain probabilities and output results as a percentage.
+1. **Monte Carlo Simulation for Rain Probability** – Estimates the probability of more than `n` rainy days in a year.
+2. **Phoneme Sequence to Word Combinations** – Finds word matches for a given phoneme sequence using a pronunciation dictionary.
+3. **Connectionist Temporal Classification (CTC) Implementation** – Computes CTC loss and gradients for sequence alignment.
 
-Q2) Phoneme Sequence to Word Combinations:
+## Installation
+Ensure Python is installed, then install dependencies:
+```sh
+pip install -r requirements.txt
+```
 
-Developed a solution to find all word combinations matching a given sequence of phonemes using a pronunciation dictionary. Utilized recursive backtracking for efficient exploration of possible matches.
+## Usage
+Run each task as follows:
 
-Q3) Connectionist Temporal Classification (CTC) Implementation:
+- **Monte Carlo Rain Simulation:**
+  ```sh
+  python monte_carlo_rain.py --days 365 --rain_prob 0.3 --threshold 100
+  ```
 
-Implemented CTC loss and gradient computation for sequence-to-sequence models. Did forward and backward prop for dp and ensured numerical stability with log-space calculations.
+- **Phoneme to Word Matching:**
+  ```sh
+  python phoneme_to_words.py --sequence "T AH N"
+  ```
+
+- **CTC Loss Calculation:**
+  ```sh
+  python ctc_loss.py
+  ```
+
+## Structure
+```
+voice-recon-tasks/
+│── src/                    # Source code
+│   ├── monte_carlo_rain.py  # Monte Carlo simulation
+│   ├── phoneme_to_words.py  # Phoneme matching
+│   ├── ctc_loss.py          # CTC computation
+│── requirements.txt         # Dependencies
+│── README.md                # Documentation
+```
+
+## License
+This project is licensed under the MIT License.
+
